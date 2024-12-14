@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Yamanotes</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+		<link rel="manifest" href="icons/site.webmanifest">
+		<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="icons/favicon.ico">
+		<meta charset="UTF-8">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="msapplication-config" content="icons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="description" content="Yamanotes (/jamanoʊts/) is a web-based music box for playing the departure melodies of each station on the JR Yamanote Line/山手線!">
+	</head>
+
+	<script src="scripts/looper.js"></script>
+	<script src="scripts/headershrink.js"></script>
+	<script src="scripts/soundonclick.js"></script>
+	<script src="scripts/menuclick.js"></script>
+	<script src="scripts/utils.js"></script>
+	<script src="scripts/yamanote.js"></script>
+
+	<body>
+
+		<div class="header" id="shrinkHeader">
+  			<h1>Yamanotes<br>山ノーツ</h1>
+		</div>
+
+
+		<div class="wrapper">
+			<ul class="loop">
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(sh3, 'Tokyo')">東京</b> Tokyo</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(seseragi, 'Kanda')">神田</b> Kanda</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(ogawav1, 'Akihabara')">秋葉原</b> Akihabara</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(harutrem, 'Okachimachi')">御徒町</b> Okachimachi</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(bellb, 'Ueno')">上野</b> Ueno</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(harutrem, 'Uguisudani')">鶯谷</b> Uguisudani</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(harutrem, 'Nippori')">日暮里</b> Nippori</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(harutrem, 'Nishi-Nippori')">西日暮里</b> Nishi-Nippori</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(harutrem, 'Tabata')">田端</b> Tabata</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(sakurab, 'Komagome')">駒込</b> Komagome</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(haru, 'Sugamo')">巣鴨</b> Sugamo</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(haru,'Ōtsuka')">大塚</b> Ōtsuka</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(melody, 'Ikebukuro')">池袋</b> Ikebukuro</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(haru, 'Mejiro')">目白</b> Mejiro</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(astrob, 'Takadanobaba')">高田馬場</b> Takadanobaba</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(bellb, 'Shin-Ōkubo')">新大久保</b> Shin-Ōkubo</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(aratana, 'Shinjuku')">新宿</b> Shinjuku</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(haru, 'Yoyogi')">代々木</b> Yoyogi</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(harajukua, 'Harajuku')">原宿</b> Harajuku</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(hananohorokobi, 'Shibuya')">渋谷</b> Shibuya</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(thirdman, 'Ebisu')">恵比寿</b> Ebisu</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(watercrown, 'Meguro')">目黒</b> Meguro</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(sh23, 'Gotanda')">五反田</b> Gotanda</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(uminoeki, 'Ōsaki')">大崎</b> Ōsaki</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(seseragi, 'Shinagawa')">品川</b> Shinagawa</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(sweetcall, 'Takanawa Gateway')">高輪ゲートウェイ</b><br>Takanawa Gateway</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(seseragi, 'Tamachi')">田町</b> Tamachi</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(seseragi, 'Hamamatsuchō')">浜松町</b> Hamamatsuchō</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(gotadelvient, 'Shimbashi')">新橋</b> Shimbashi</a></li>
+				<li>▫️</li>
+				<li>▫️</li>
+				<li><b><a href="#current" onclick="onClickFunction(sh21, 'Yūrakuchō')">有楽町</b> Yūrakuchō</a></li>
+			</ul>
+		</div>
+
+		<div class="footer">
+			<div class="dropdown">
+				<h3><a onclick="myFunction()" class="dropbtn">line</a></h3>
+				<div id="myDropdown" class="dropdown-content">
+					<h3><a href="lines/kt.html">Keihin-T.</a>
+					<a href="lines/nex.html">N'EX</a>
+					<a href="lines/saikyo.html">Saikyō</a>
+					<a href="lines/sobu.html">Sōbu</a>
+					<a href="lines/uenotokyo.html">Ueno-T.</a>
+					<a href="#">Yamanote</a></h3>
+				</div>
+			</div>
+			<h3><a href="https://github.com/morgansleeper/Yamanotes">about</a></h3>
+		</div>
+
+	</body>
+
+	<audio>
+		<source src="audio/aratana.mp3" type="audio/mpeg">
+		<source src="audio/astrob.mp3" type="audio/mpeg">
+		<source src="audio/bellb.mp3" type="audio/mpeg">
+		<source src="audio/gotadelvient.mp3" type="audio/mpeg">
+		<source src="audio/hananohorokobi.mp3" type="audio/mpeg">
+		<source src="audio/harajukua.mp3" type="audio/mpeg">
+		<source src="audio/haru.mp3" type="audio/mpeg">
+		<source src="audio/harutrem.mp3" type="audio/mpeg">
+		<source src="audio/melody.mp3" type="audio/mpeg">
+		<source src="audio/ogawav1.mp3" type="audio/mpeg">
+		<source src="audio/sakurab.mp3" type="audio/mpeg">
+		<source src="audio/seseragi.mp3" type="audio/mpeg">
+		<source src="audio/sf1.mp3" type="audio/mpeg">
+		<source src="audio/sh21.mp3" type="audio/mpeg">
+		<source src="audio/sh23.mp3" type="audio/mpeg">
+		<source src="audio/sh3.mp3" type="audio/mpeg">
+		<source src="audio/sweetcall.mp3" type="audio/mpeg">
+		<source src="audio/thirdman.mp3" type="audio/mpeg">
+		<source src="audio/uminoeki.mp3" type="audio/mpeg">
+		<source src="audio/watercrown.mp3" type="audio/mpeg">
+	</audio>
+</html>
